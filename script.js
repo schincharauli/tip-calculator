@@ -20,7 +20,6 @@ billAmount.addEventListener("input", (e) => {
   }
 
   if (parseInt(billNum) < 0 || isNaN(billNum)) {
-    
     document.querySelector("#message").innerHTML =
       "please use positive numbers";
   } else {
@@ -53,7 +52,6 @@ numberOfPeople.addEventListener("input", (e) => {
     );
   }
 });
-
 
 // the action that happens when the percent buttons are clicked
 buttons.forEach((button) => {

@@ -85,7 +85,6 @@ body {
 .error-msg {
   color: red;
   font-size: 14px;
-  /* display: flex; */
 }
 
 .inputs-section {
@@ -139,12 +138,6 @@ label {
   border-radius: 7px;
   font-size: 1.1rem;
 }
-
-/* .tip-btns button:hover {
-  background-color: var(--Strong-cyan);
-  color: var(--Very-dark-cyan);
-  font-weight: bolder;
-} */
 
 .tip-btns .active {
   background-color: var(--Strong-cyan);
