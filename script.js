@@ -92,6 +92,7 @@ function clickHandler(event) {
 // the action that happens when we use custom input
 customTipPercentage.addEventListener("input", (e) => {
   let customNum = e.target.value;
+  percent = parseInt(e.target.value);
 
   if (billAmount.value === "") {
     resetEverything();
@@ -102,7 +103,9 @@ customTipPercentage.addEventListener("input", (e) => {
     numberOfPeople.value = 1;
   }
 
-  if (percent > 0 && billNum > 0 && numberOfPeople.value > 0) {
+  
+
+  if (percent > 0 && percent < 100 && billAmount.value > 0 && numberOfPeople.value > 0) {
     calculateTip(
       parseFloat(billAmount.value),
       parseInt(e.target.value),
@@ -122,6 +125,7 @@ function calculateTip(billAmount, tipPercentage, numberOfPeople) {
   let tipAmount = (billAmount * (tipPercentage / 100)) / numberOfPeople;
   let tip = Math.floor(tipAmount * 100) / 100;
   tip = tip.toFixed(2);
+  console.log(percent)
 
   let totalAmount = (tipAmount * numberOfPeople + billAmount) / numberOfPeople;
   totalAmount = totalAmount.toFixed(2);
